@@ -126,7 +126,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="..\LogInTestSteps.cs">
-      <Link>BindingSteps\LogInTestSteps.cs</Link>
+      <Link>StepBindings\LogInTestSteps.cs</Link>
     </Compile>
     <Compile Include="StepBindings\DeletingAllEmailsSteps.cs" />
     <Compile Include="StepBindings\SendingMsgSteps.cs" />
