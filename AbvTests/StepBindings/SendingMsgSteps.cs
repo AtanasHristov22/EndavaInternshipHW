@@ -66,7 +66,7 @@ namespace AbvTests
         public void GivenIHaveClickedOnSendEmailButton()
         {
             SendingAnEmail sendingMsgPage = new SendingAnEmail(driver);
-            sendingMsgPage.clickOnSendEmailButton();
+            sendingMsgPage.ClickOnSendEmailButton();
         }
 
         [Then(@"the result should see the result")]

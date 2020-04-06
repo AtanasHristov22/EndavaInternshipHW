@@ -24,35 +24,35 @@ namespace AbvTests
         public void WhenIEnterUsername(string username)
         {
             LogInPage logInPage = new LogInPage(driver);
-            logInPage.inputUsername(username);
+            logInPage.InputUsername(username);
         }
         
         [When(@"I enter password ""(.*)""")]
         public void WhenIEnterPassword(string password)
         {
             LogInPage logInPage = new LogInPage(driver);
-            logInPage.inputPassword(password);
+            logInPage.InputPassword(password);
         }
         
         [When(@"I click the button Sign in")]
         public void WhenIClickTheButtonSignIn()
         {
             LogInPage logInPage = new LogInPage(driver);
-            logInPage.clickSignInButton();
+            logInPage.ClickSignInButton();
         }
         
         [Then(@"I should see the account's email page")]
         public void ThenIShouldSeeTheAccountSEmailPage()
         {
             LogInPage logInPage = new LogInPage(driver);
-            Assert.IsTrue(logInPage.isMsgDisplayed());
+            Assert.IsTrue(logInPage.IsMsgDisplayed());
             
         }
         [Then(@"I should not see the account's email page")]
         public void ThenIShouldNotSeeTheAccountSEmailPage()
         {
             LogInPage logInPage = new LogInPage(driver);
-            Assert.IsTrue(logInPage.isFalseMsgDisplayed());
+            Assert.IsTrue(logInPage.IsFalseMsgDisplayed());
         }
 
         public void Dispose()

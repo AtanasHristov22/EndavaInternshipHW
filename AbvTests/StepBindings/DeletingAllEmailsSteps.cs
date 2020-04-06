@@ -23,49 +23,49 @@ namespace AbvTests
         public void GivenIVeEnteredMyUsername(string username)
         {
             DeletingAllEmails page = new DeletingAllEmails(driver);
-            page.inputUsername(username);
+            page.InputUsername(username);
         }
         
         [Given(@"I've entered my password ""(.*)""")]
         public void GivenIVeEnteredMyPassword(string password)
         {
             DeletingAllEmails page = new DeletingAllEmails(driver);
-            page.inputPassword(password);
+            page.InputPassword(password);
         }
         
         [Given(@"I've entered successfully")]
         public void GivenIVeEnteredSuccessfully()
         {
             DeletingAllEmails page = new DeletingAllEmails(driver);
-            page.clickSignInButton();
+            page.ClickSignInButton();
         }
         
         [Given(@"I click on my email box")]
         public void GivenIClickOnMyEmailBox()
         {
             DeletingAllEmails page = new DeletingAllEmails(driver);
-            page.clickMyBoxButton();
+            page.ClickMyBoxButton();
         }
         
         [Given(@"I click on mark all of my emails square")]
         public void GivenIClickOnMarkAllOfMyEmailsSquare()
         {
             DeletingAllEmails page = new DeletingAllEmails(driver);
-            page.clickOnSquareBox();
+            page.ClickOnSquareBox();
         }
         
         [Given(@"I click the button delete")]
         public void GivenIClickTheButtonDelete()
         {
             DeletingAllEmails page = new DeletingAllEmails(driver);
-            page.clickOnDeleteButton();
+            page.ClickOnDeleteButton();
         }
         
         [Then(@"I can see the result")]
         public void ThenICanSeeTheResult()
         {
             DeletingAllEmails page = new DeletingAllEmails(driver);
-            Assert.IsTrue(page.isMsgDislplayed());
+            Assert.IsTrue(page.IsMsgDislplayed());
         }
         public void Dispose()
         {

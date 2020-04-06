@@ -27,40 +27,52 @@ namespace AbvTests.WebElements
             this.driver = driver;
         }
 
-        public void inputUsername(string username)
+        public void InputUsername(string username)
         {
             driver.FindElement(usernameField).Clear();
             driver.FindElement(usernameField).SendKeys(username);
         }
 
-        public void inputPassword(string password)
+        public void InputPassword(string password)
         {
             driver.FindElement(passwordField).Clear();
             driver.FindElement(passwordField).SendKeys(password);
         }
 
-        public void clickSignInButton()
+        public void ClickSignInButton()
         {
             driver.FindElement(signInButton).Click();
         }
 
-        public void clickMyBoxButton()
+        public void ClickMyBoxButton()
         {
+            Monitor.Enter(driver);
+            Monitor.Wait(driver, 3000);
+            Monitor.Exit(driver);
             driver.FindElement(myBoxButton).Click();
         }
 
-        public void clickOnSquareBox()
+        public void ClickOnSquareBox()
         {
+            Monitor.Enter(driver);
+            Monitor.Wait(driver, 3000);
+            Monitor.Exit(driver);
             driver.FindElement(squareBox).Click();
         }
 
-        public void clickOnDeleteButton()
+        public void ClickOnDeleteButton()
         {
+            Monitor.Enter(driver);
+            Monitor.Wait(driver, 3000);
+            Monitor.Exit(driver);
             driver.FindElement(deleteButton).Click();
         }
 
-        public bool isMsgDislplayed()
+        public bool IsMsgDislplayed()
         {
+            Monitor.Enter(driver);
+            Monitor.Wait(driver, 3000);
+            Monitor.Exit(driver);
             driver.Manage().Cookies.DeleteAllCookies();
             return driver.FindElement(messageConfirmation).Displayed;
         }

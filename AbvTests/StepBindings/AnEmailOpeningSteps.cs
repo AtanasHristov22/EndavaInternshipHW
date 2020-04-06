@@ -23,42 +23,42 @@ namespace AbvTests
         public void GivenIHaveEnteredMyUsername(string username)
         {
             AnEmailOpening page = new AnEmailOpening(driver);
-            page.inputUsername(username);
+            page.InputUsername(username);
         }
         
         [Given(@"I have entered my password ""(.*)""")]
         public void GivenIHaveEnteredMyPassword(string password)
         {
             AnEmailOpening page = new AnEmailOpening(driver);
-            page.inputPassword(password);
+            page.InputPassword(password);
         }
 
         [Given(@"I have entered successfully")]
         public void GivenIHaveEnteredSuccessfully()
         {
             AnEmailOpening page = new AnEmailOpening(driver);
-            page.clickSignInButton();
+            page.ClickSignInButton();
         }
 
         [Given(@"I click the Box")]
         public void GivenIClickTheBox()
         {
             AnEmailOpening page = new AnEmailOpening(driver);
-            page.clickMyBoxButton();
+            page.ClickMyBoxButton();
         }
         
         [Given(@"I click on the first email")]
         public void GivenIClickOnTheFirstEmail()
         {
             AnEmailOpening page = new AnEmailOpening(driver);
-            page.clickOnMyEmail();
+            page.ClickOnMyEmail();
         }
         
         [Then(@"I can see what my email contains")]
         public void ThenICanSeeWhatMyEmailContains()
         {
             AnEmailOpening page = new AnEmailOpening(driver);
-            Assert.IsTrue(page.isMsgDisplayed());
+            Assert.IsTrue(page.IsMsgDisplayed());
         }
 
         public void Dispose()

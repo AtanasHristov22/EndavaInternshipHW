@@ -41,35 +41,50 @@ namespace AbvTests.WebElements
         }
 
         public void clickSignInButton()
-        {
+        {           
             driver.FindElement(signInButton).Click();
         }
 
         public void clickSendMsgButton()
         {
+            Monitor.Enter(driver);
+            Monitor.Wait(driver, 3000);
+            Monitor.Exit(driver);
             driver.FindElement(sendMsgButton).Click();
         }
 
         public void inputSendTo(string sendingTo)
         {
+            Monitor.Enter(driver);
+            Monitor.Wait(driver, 3000);
+            Monitor.Exit(driver);
             driver.FindElement(sendingToField).Clear();
             driver.FindElement(sendingToField).SendKeys(sendingTo);
         }
 
         public void inputThemeMsg(string themeMsg)
         {
+            Monitor.Enter(driver);
+            Monitor.Wait(driver, 3000);
+            Monitor.Exit(driver);
             driver.FindElement(themeMsgField).Clear();
             driver.FindElement(themeMsgField).SendKeys(themeMsg);
         }
 
-        public void clickOnSendEmailButton()
-        {          
+        public void ClickOnSendEmailButton()
+        {
+            Monitor.Enter(driver);
+            Monitor.Wait(driver, 3000);
+            Monitor.Exit(driver);
             driver.FindElement(sendEmailButton).Click();
         }
 
         public bool isMsgDisplayed()
         {
-            driver.Manage().Cookies.DeleteAllCookies();
+            Monitor.Enter(driver);
+            Monitor.Wait(driver, 3000);
+            Monitor.Exit(driver);
+            driver.Manage().Cookies.DeleteAllCookies();   
             return driver.FindElement(confirmationMsg).Displayed;
         }
 
