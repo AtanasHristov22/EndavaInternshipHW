@@ -42,39 +42,34 @@ namespace AbvTests.WebElements
 
         public void clickSignInButton()
         {
-            Thread.Sleep(1000);
             driver.FindElement(signInButton).Click();
         }
 
         public void clickSendMsgButton()
         {
-            Thread.Sleep(3000);
             driver.FindElement(sendMsgButton).Click();
         }
 
         public void inputSendTo(string sendingTo)
         {
-            Thread.Sleep(1000);
             driver.FindElement(sendingToField).Clear();
             driver.FindElement(sendingToField).SendKeys(sendingTo);
         }
 
         public void inputThemeMsg(string themeMsg)
         {
-            Thread.Sleep(1000);
             driver.FindElement(themeMsgField).Clear();
             driver.FindElement(themeMsgField).SendKeys(themeMsg);
         }
 
         public void clickOnSendEmailButton()
-        {
-            Thread.Sleep(2000);
+        {          
             driver.FindElement(sendEmailButton).Click();
         }
 
         public bool isMsgDisplayed()
         {
-            Thread.Sleep(2000);
+            driver.Manage().Cookies.DeleteAllCookies();
             return driver.FindElement(confirmationMsg).Displayed;
         }
 

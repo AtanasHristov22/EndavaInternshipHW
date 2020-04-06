@@ -45,19 +45,17 @@ namespace AbvTests.WebElements
 
         public void clickMyBoxButton()
         {
-            Thread.Sleep(3000);
             driver.FindElement(myBoxButton).Click();
         }
 
         public void clickOnMyEmail()
         {
-            Thread.Sleep(3000);
             driver.FindElement(myEmail).Click();
         }
 
         public bool isMsgDisplayed()
         {
-            Thread.Sleep(3000);
+            driver.Manage().Cookies.DeleteAllCookies();
             return driver.FindElement(msgConfirmation).Displayed;
         }    
     }

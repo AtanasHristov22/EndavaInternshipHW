@@ -43,12 +43,11 @@ namespace AbvTests.WebElements
 
         public bool isMsgDisplayed()
         {
-            Thread.Sleep(3000);
             return driver.FindElement(messageConfirmation).Displayed;
         }
         public bool isFalseMsgDisplayed()
         {
-            Thread.Sleep(3000);
+            driver.Manage().Cookies.DeleteAllCookies();
             return driver.FindElement(messageFail).Displayed;
         }
 
